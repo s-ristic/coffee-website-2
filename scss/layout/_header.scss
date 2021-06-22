@@ -1,0 +1,143 @@
+@use '../utils' as *;
+
+.header {
+  position: relative;
+  background: $silver-color;
+  padding: 5rem 3rem 25rem;
+  text-align: center;
+
+  @include mq(lg) {
+    padding: 5rem 10rem 25rem;
+  }
+
+  &__logo {
+    position: relative;
+    width: 15rem;
+    height: 5rem;
+  }
+
+  &__navBtn {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: $silver-color;
+    font-size: font-size(l);
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  nav {
+    position: relative;
+    @include flex($justify-content: space-between);
+    z-index: 10;
+
+    ul {
+      position: absolute;
+      top: 7rem;
+      left: 0;
+      background: $silver-color;
+      width: 100%;
+      @include flex(column);
+      border-bottom: 0.2rem solid $text-color;
+      padding: 2rem 0;
+      opacity: 0;
+      visibility: hidden;
+      @extend %transition;
+
+      @include mq(lg) {
+        flex-direction: row;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: initial;
+        background: transparent;
+        border: none;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      li {
+        margin: 2rem 0;
+
+        @include mq(lg) {
+          margin: 0 2rem;
+        }
+      }
+
+      a {
+        color: $text-color;
+        font-weight: font-weight(bold);
+        padding: 0.5rem 0;
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        @include pseudo($top: initial, $height: 0.2rem) {
+          bottom: 0;
+          background: $text-color;
+          opacity: 0;
+          @extend %transition;
+        }
+      }
+    }
+  }
+
+  nav.menu--open ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__imageTop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17rem;
+    height: 17rem;
+    filter: drop-shadow(box-shadow(m));
+
+    @include mq(lg) {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__imageBottom {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 25rem;
+    height: 15rem;
+    filter: drop-shadow(box-shadow(m));
+
+    @include mq(lg) {
+      bottom: 0;
+      width: 50rem;
+      height: 30rem;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__imageCenter {
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+    width: 30%;
+    height: 32rem;
+    filter: drop-shadow(box-shadow(m));
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

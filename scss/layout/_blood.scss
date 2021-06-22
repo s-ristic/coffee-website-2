@@ -1,0 +1,38 @@
+@use '../utils' as *;
+
+.blood {
+  position: relative;
+  padding: 5rem 3rem;
+  @include flex(column-reverse, center, flex-start);
+
+  @include mq(lg) {
+    padding: 5rem 15rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__imageBox {
+    position: relative;
+    width: 70%;
+    height: 70rem;
+    margin-top: -30rem;
+    margin-bottom: 5rem;
+    box-shadow: box-shadow(s);
+    border-radius: border-radius(m);
+    overflow: hidden;
+
+    @include mq(lg) {
+      width: 40%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    width: 100%;
+
+    @include mq(lg) {
+      width: 55%;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+$main-color: #8a562a;
+$text-color: #999;
+$light-color: #fff;
+$main-light-color: #ddcdbe;
+$silver-color: #f8f8f8;
+$form-bg-color: #f0ebec;
+$fb-color: #3b5998;
+$tw-color: #00aced;
+$go-color: #db4437;
+
+$font-sizes: (
+  'xs': 1.2rem,
+  's': 1.6rem,
+  'm': 2rem,
+  'l': 2.4rem,
+  'xl': 3.2rem,
+  'xxl': 6rem,
+  'xxxl': 15vw,
+);
+
+$font-weights: (
+  'regular': 400,
+  'bold': 700,
+);
+
+$font-families: (
+  'sans-serif': #{'KoHo',
+  sans-serif},
+  'serif': #{'Playfair Display',
+  serif},
+);
+
+$border-radius: (
+  's': 0.7rem,
+  'm': 1.2rem,
+  'l': 3rem,
+  'round': 5rem,
+  'circle': 50%,
+);
+
+$box-shadows: (
+  's': 1rem 1rem 3rem rgba(0, 0, 0, 0.2),
+  'm': 1rem 2rem 3rem rgba(0, 0, 0, 0.3),
+  'mr': -0.5rem 1rem 5rem rgba(0, 0, 0, 0.05),
+);
+
+$opacities: (
+  1: 0.1,
+  2: 0.2,
+  5: 0.5,
+  7: 0.7,
+  10: 1,
+);
+
+$breakpoints: (
+  'xs': 360px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'hd': 1280px,
+  'fhd': 1920px,
+  'qhd': 2560px,
+  'uhd': 3840px,
+  'fivek': 5120px,
+  'eightk': 7680px,
+);

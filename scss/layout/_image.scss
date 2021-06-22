@@ -1,0 +1,20 @@
+@use '../utils' as *;
+
+.image {
+  position: relative;
+  height: 60rem;
+  padding: 5rem 3rem;
+
+  @include mq(lg) {
+    padding: 5rem;
+  }
+
+  img {
+    width: calc(100% - 6rem);
+    height: calc(100% - 10rem);
+
+    @include mq(lg) {
+      width: calc(100% - 10rem);
+    }
+  }
+}

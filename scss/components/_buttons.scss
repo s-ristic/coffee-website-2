@@ -1,0 +1,51 @@
+@use '../utils' as *;
+
+%btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-size: font-size(m);
+  font-weight: font-weight(bold);
+  font-family: inherit;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 1.5rem 4rem;
+  border-radius: border-radius(round);
+  cursor: pointer;
+  @extend %transition;
+}
+
+.btn--primary {
+  @extend %btn;
+  background: $light-color;
+  color: $main-color;
+  border: 0.3rem solid $main-color;
+
+  &:hover {
+    background: $main-color;
+    color: $light-color;
+  }
+}
+
+.btn--secondary {
+  @extend %btn;
+  background: $main-light-color;
+  color: $main-color;
+
+  &:hover {
+    background: $main-color;
+    color: $main-light-color;
+  }
+}
+
+.btn--tertiary {
+  @extend %btn;
+  background: $main-color;
+  color: $light-color;
+
+  &:hover {
+    background: $light-color;
+    color: $main-color;
+  }
+}
